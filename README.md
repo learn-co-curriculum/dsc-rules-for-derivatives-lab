@@ -31,7 +31,7 @@ In writing `find_term_derivative`, let's first consider the function $f(x) = x^3
 
 ```python
 import numpy as np
-array_cubed_1 = np.array([1, 3])
+array_cubed_1 = None
 array_cubed_1
 ```
 
@@ -45,15 +45,13 @@ array_cubed_1
 
 ```python
 def find_term_derivative(term):
-    constant = term[0]*term[1]
-    exponent = term[1] - 1 
-    return np.array([constant, exponent])
+    None
+# return something which looks like: np.array([constant, exponent])
 ```
 
 
 ```python
 # use find_term_derivative on array_cubed_1
-find_term_derivative(array_cubed_1) 
 # array([3, 2])
 ```
 
@@ -68,9 +66,9 @@ Let's try the function with $f(x) = 2x^2$.
 
 
 ```python
-array_squared = np.array([2, 2])
+array_squared = None
 # use find_term_derivative on array_squared
-find_term_derivative(array_squared)
+
 # array([4, 1])
 ```
 
@@ -90,18 +88,14 @@ For example, if the derivative of a function $f(x)$ is $f'(x) = 2x^3 + 4x^2$, th
 
 ```python
 def find_derivative(function_terms):
-    der_array = np.zeros(np.shape(function_terms))
-    for i in range(int(np.shape(function_terms)[0])):
-        der_array[i] = find_term_derivative(function_terms[i])
-    return der_array
+    None
 ```
 
 Let's apply this function to $f(x) = 4x^3 - 3x$.
 
 
 ```python
-array_cubed_2 = np.array([[4,3],[-3,1]])
-find_derivative(array_cubed_2)
+array_cubed_2 = None
 # [(12, 2), (-3, 0)]
 ```
 
@@ -113,15 +107,14 @@ find_derivative(array_cubed_2)
 
 
 
-One gotcha to note is when one of our terms is a constant, when taking the derivative, both the exponent and the constant are equal to 0.  For example, when $f(x) = 3x^2 - 11$, the derivative $f'(x) = 6x$.  The reason why is because 11 is the same as $11*x^0$ which is also $11*1$, as anything raised to the zero power equals 1. And so the derivative of the term $11x^0$ equals $0*11*x^{-1} = 0$.  Our `find_derivative` function should return zeroes for these terms.  Let's store $f(x) = 3x^2 - 11$ in `array_squared_1` and apply `find_derivative` to it.
+One gotcha to note is when one of our terms is a constant, when taking the derivative, the constant will be equal to 0, while the exponent technically becomes negative (-1).  For example, when $f(x) = 3x^2 - 11$, the derivative $f'(x) = 6x$.  The reason why is because 11 is the same as $11*x^0$ which is also $11*1$, as anything raised to the zero power equals 1. And so the derivative of the term $11x^0$ equals $0*11*x^{-1} = 0$.  Our `find_derivative` function should return a zero for the constant and -1 for the exponent.  Let's store $f(x) = 3x^2 - 11$ in `array_squared_1` and apply `find_derivative` to it.
 
 
 ```python
-array_squared_1 = [(3, 2), (-11, 0)]
+array_squared_1 = None
 # use find_derivative on array_squared_1
-find_derivative(array_squared_1) 
 # array([[6., 1.],
-#       [0., 0.]])
+#       [0., -1.]])
 ```
 
 
@@ -137,19 +130,16 @@ Our next function is called, `derivative_at` which, when provided a list of term
 
 ```python
 def derivative_at(terms, x):
-    derivative_fn = find_derivative(terms)
-    total = 0
-    for term in derivative_fn:
-        total += term[0]*x**term[1]
+    None
     return total
 ```
 
 
 ```python
 # apply find_derivative to array_squared_1
-find_derivative(array_squared_1) 
+None
 # array([[6., 1.],
-#       [0., 0.]])
+#       [0., -1.]])
 ```
 
 
@@ -163,7 +153,7 @@ find_derivative(array_squared_1)
 
 ```python
 # apply derivative_at to array_squared_1, looking to get the derivative at x=2
-derivative_at(array_squared_1, 2)
+None
 # 12
 ```
 
@@ -211,7 +201,7 @@ Now, let's apply our function `tangent_line` to `array_squared_1`. Let's assume 
 
 
 ```python
-tan_line = tangent_line(array_squared_1, 5, 6)
+tan_line = None
 tan_line
 ```
 
@@ -274,7 +264,7 @@ We can also write a function that given a list of terms can plot the derivative 
 
 
 ```python
-array_squared_1 = np.array([[3, 2], [-11, 0]])
+array_squared_1 = None
 ```
 
 Now, you can use `np.linspace` to generate $x$-values between -10 and 10. Next you can use the `output_at` function and the `derivative_at` function along with lambda functions to generate $f(x)$ and $f'(x)$ respectively.
