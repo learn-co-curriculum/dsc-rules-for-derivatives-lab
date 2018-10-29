@@ -11,6 +11,8 @@ In this lab, we will practice implementing the rules for derivatives with code. 
 
 ## Objectives
 
+You will be able to:
+
 - Understand the rules for taking the derivative of each term
 - Understand how to take the derivative of a function
 
