@@ -83,7 +83,7 @@ find_term_derivative(array_squared)
 
 
 
-Ok, now that we have a Python function called `find_derivative` that can take a derivative of a term, write a function that takes our multi-termed function as an argument, and returns the derivative of the multi-term function represented as a 2D array. 
+Ok, now that we have a Python function called `find_term_derivative` that can take a derivative of a term, write a function that takes our multi-termed function as an argument, and returns the derivative of the multi-term function represented as a 2D array. 
 
 For example, if the derivative of a function $f(x)$ is $f'(x) = 2x^3 + 4x^2$, then the function `find_derivative` should return `[(2, 3), (4, 2)]`.
 
