@@ -189,7 +189,7 @@ find_derivative(array_squared_1)
 
 
 
-Our next function is called, `derivative_at` which, when provided a list of terms and a value $x$ at which to evaluate the derivative, returns the value of derivative at that point.
+Our next function is called, `derivative_at` which, when provided a list of terms and a value $x$ at which to evaluate the derivative, returns the value of the derivative at that point.
 
 
 ```python
