@@ -13,8 +13,8 @@ In this lab, we will practice implementing the rules for derivatives with code. 
 
 You will be able to:
 
-- Understand the rules for taking the derivative of each term
-- Understand how to take the derivative of a function
+- Calculate derivatives of more complex functions by using power rules, constant factor and the addition rule
+- Use python functions to demonstrate derivatives of functions
 
 ## Let's get started!
 
@@ -267,7 +267,7 @@ ax.legend(loc='upper center', fontsize='large');
 ```
 
 
-![png](index_files/index_29_0.png)
+![png](index_files/index_22_0.png)
 
 
 #### Graphing the derivative across a range of values
@@ -314,7 +314,7 @@ plt.legend(loc="upper left");
 ```
 
 
-![png](index_files/index_35_0.png)
+![png](index_files/index_28_0.png)
 
 
 Note that when the $x$ values of $f(x)$ are positive, the $f(x)$ begins increasing, therefore $f'(x)$ is greater than zero, which the graph on the right displays.  And the more positive the values $x$ for $f(x)$, the faster the rate of increase.  When our function $f(x)$ is negative, the function is decreasing, that is for every change in $x$, the change in $f(x)$ is negative, and therefore $f'(x)$ is negative.
