@@ -13,8 +13,8 @@ In this lab, we will practice implementing the rules for derivatives with code. 
 
 You will be able to:
 
-- Understand the rules for taking the derivative of each term
-- Understand how to take the derivative of a function
+- Calculate derivatives of more complex functions by using power rules, constant factor and the addition rule
+- Use python functions to demonstrate derivatives of functions
 
 ## Let's get started!
 
